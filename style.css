@@ -1,0 +1,87 @@
+.button {
+	height: 25px;
+	width: 70px;
+	background-color: rgba(236, 13, 142);
+	border: none;
+	color: white;
+	padding: 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	margin: 1px;
+	cursor: pointer;
+}
+.bar {
+	margin-top: 2px;
+	height: 2px;
+	width: 70px;
+}
+.buttonWrapper {
+	padding-left: 30px;
+	padding-right: 30px;
+	display: flex;
+	flex-direction: row-reverse;
+}
+.topnav {
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+	border-bottom: 2px solid rgba(236, 13, 142);
+}
+.topnav>a {
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-bottom: 10px;
+	color: rgba(236, 13, 142);
+}
+.topnav>a:link {
+	text-decoration: none;
+}
+.textWrapper {
+	display: flex;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.text1, .text2 {
+	width: 50%;
+}
+.text1 {
+	padding-right: 12px;
+}
+.text2 {
+	padding-left: 12px;
+}
+.Bsupport {
+	height: 25px;
+	width: 150 px;
+	background-color: rgba(236, 13, 142);
+	border: none;
+	color: white;
+	padding: 5px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 14px;
+	margin: auto;
+	cursor: pointer;
+	display: block;
+	margin-bottom: 10px;
+}
+
+.PurplePar {
+	display: flex;
+	background-color: rgba(236, 13, 142);
+	
+}
+
+.Ptext1{
+	padding-right: 12px;
+}
+.Ptext2{
+	padding-left: 12px;
+}
+.Ptext1,.Ptext2{
+	width:50%;
+}
