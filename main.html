@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Uni Project</title>
 </head>
 
@@ -38,8 +38,8 @@
     </div>
     </div>
     <a class="hamburger" style="cursor: pointer;">☰</a>
-    </nav>
-    <br>
+  </nav>
+  <br>
 
   Image 2
 
@@ -61,28 +61,44 @@
     </div>
   </div>
   <button class="Bsupport">Click to Support</button>
+
   <!--purple paragraph1-->
 
   <div class="PurplePar">
     <div class="Ptext1">
+
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum ad rem ullam dolorum soluta reprehenderit,
         laboriosam unde consequatur expedita dolores dignissimos quisquam, explicabo saepe sunt necessitatibus iure
         omnis quis! Quasi.</p>
       <p>Beatae suscipit illo, quod. Exercitationem non cum, sapiente recusandae, architecto a atque. Atque quas,
         dolorum dolorem maxime porro vitae cupiditate accusamus explicabo quia consectetur esse ea ex a quasi, ducimus.
       </p>
-      <button class="ReadMore" style="border-bottom: 4px solid white" ;> READ MORE </button>
-      <p></p>
+
+      <span id="dots">...</span><span id="more"> <p style="width: 100%;">Quasi eos dolorum officia accusantium nesciunt eius explicabo cumque asperiores, maiores dignissimos dolor
+        molestias adipisci magni tempore iusto vero, doloremque voluptas sapiente animi voluptatibus nemo rerum
+        necessitatibus eligendi nisi. Dolore.</p>
+      <p>Maiores nisi, maxime illum corporis fugit dignissimos voluptatem repellendus laboriosam repudiandae corrupti
+        voluptatum omnis, perspiciatis fuga, in sed iste perferendis similique. Aspernatur nulla dolorum dolorem
+        voluptatum soluta vero repellat nostrum.</p></span>
+  
+  <button onclick="myFunction()" id="myBtn"style="border-bottom: 4px solid white">Read more</button>
+  <style>  
+     #more {
+       display: none;
+     }
+  </style>
+
     </div>
+
     <div class="Ptext2">
       <p>Quasi eos dolorum officia accusantium nesciunt eius explicabo cumque asperiores, maiores dignissimos dolor
         molestias adipisci magni tempore iusto vero, doloremque voluptas sapiente animi voluptatibus nemo rerum
         necessitatibus eligendi nisi. Dolore.</p>
       <p>Maiores nisi, maxime illum corporis fugit dignissimos voluptatem repellendus laboriosam repudiandae corrupti
         voluptatum omnis, perspiciatis fuga, in sed iste perferendis similique. Aspernatur nulla dolorum dolorem
-        voluptatum soluta vero repellat nostrum.</p>
-
-    </div>
+        voluptatum soluta vero repellat nostrum.</p> 
+      </div>
+    
   </div>
 
   <h1 style="color: rgba(236, 13, 142);font-size:25px;border-bottom: 2px solid rgba(236, 13, 142);cursor: pointer;">
@@ -227,7 +243,7 @@
           <input class="inp" type="text" size="40" placeholder="Mobile Phone Number">
           <br>
           <br>
-          <textarea cols="42" rows="5" placeholder="Message" style="resize: none;" ></textarea>
+          <textarea cols="42" rows="5" placeholder="Message" style="resize: none;"></textarea>
           <br>
           <br>
           <button>Send</button>
@@ -252,21 +268,24 @@
     </table>
   </div>
 
-
-
-
   <script>
-    $(".action").each(function () {
-      $(this).css("margin-left", ($(".title").children().eq(1).offset().left) - ($(this).prev().width() + $(this).prev().prev().width() + 45))
-    })
+    function myFunction() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("myBtn");
+    
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more"; 
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less"; 
+        moreText.style.display = "inline";
+      }
+    }
+    </script>
 
-    $(window).resize(function () {
-      $(".action").each(function () {
-        $(this).css("margin-left", ($(".title").children().eq(1).offset().left) - ($(this).prev().width() + $(this).prev().prev().width() + 45))
-      })
-    })
-
-  </script>
 
   <script>
     function showBar(object) {
@@ -277,16 +296,16 @@
     }
   </script>
 
-<script>
-  var x = document.getElementsByTagName("nav")[0];
-  function toggleNav() {
-     if (x.className === "") {
+  <script>
+    var x = document.getElementsByTagName("nav")[0];
+    function toggleNav() {
+      if (x.className === "") {
         x.className = " openNav";
-     } else {
+      } else {
         x.className = "";
-     }
-  }
-  document.querySelector(".hamburger").addEventListener("click", toggleNav);
+      }
+    }
+    document.querySelector(".hamburger").addEventListener("click", toggleNav);
   </script>
 
 </body>
